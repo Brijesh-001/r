@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab 8 – Custom Marker AR</title>
+
+  <script src="aframe.min.js"></script>
+  <script src="aframe-ar.js"></script>
+</head>
+
+<body style="margin:0; overflow:hidden;">
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: true;">
+
+    <a-marker type="pattern" url="pattern-kanji.patt">
+
+      <!-- Light purple cone -->
+      <a-cone
+        position="0 0.75 0"
+        radius-bottom="0.5"
+        height="1.5"
+        color="#C8A2C8"
+        material="opacity: 0.9; transparent: true">
+      </a-cone>
+
+      <!-- Light blue torus -->
+      <a-torus
+        position="1.2 0.75 0"
+        radius="0.5"
+        radius-tubular="0.15"
+        color="#ADD8E6"
+        material="opacity: 0.9; transparent: true">
+      </a-torus>
+
+    </a-marker>
+
+    <!-- Camera -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>

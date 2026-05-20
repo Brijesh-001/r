@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LAB 10 - GLB Model</title>
+
+  <script src="aframe.min.js"></script>
+
+  <style>
+    body { margin:0; }
+
+    button {
+      position:absolute;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      padding:12px 25px;
+      font-size:18px;
+      background:#4CC3D9;
+      border:none;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+      z-index:10;
+    }
+  </style>
+</head>
+
+<body>
+
+<a-scene>
+
+  <a-assets>
+    <!-- LOAD GLB MODEL -->
+    <a-asset-item id="car" src="model/model.glb"></a-asset-item>
+  </a-assets>
+
+  <!-- Camera -->
+  <a-camera position="0 1.6 4"></a-camera>
+
+  <!-- 3D Model -->
+  <a-entity 
+      id="model"
+      gltf-model="#car"
+      position="0 0 -3"
+      rotation="0 45 0"
+      scale="12 12 12">
+  </a-entity>
+
+</a-scene>
+
+<button onclick="rotateModel()">Rotate Model 45°</button>
+
+<script>
+function rotateModel(){
+  const m = document.querySelector("#model");
+  let r = m.getAttribute("rotation");
+  r.y += 45;
+  m.setAttribute("rotation", r);
+}
+</script>
+
+</body>
+</html>

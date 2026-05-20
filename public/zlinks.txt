@@ -1,0 +1,19 @@
+https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+
+
+https://github.com/jeromeetienne/AR.js/blob/master/three.js/examples/marker-training/examples/pattern-images/pattern-kanji.png
+
+https://github.com/jeromeetienne/AR.js/blob/master/three.js/examples/marker-training/examples/pattern-files/pattern-kanji.patt
+this is for marker based
+
+
+aframe.min.js → Creates the 3D scene
+mindar-image-aframe.prod.js → Adds image tracking AR capability
+
+aframe.min.js	Creates 3D/VR scene
+mindar-image-aframe.prod.js	Image tracking AR using MindAR
+aframe-ar.js	AR support using AR.js
+
+
+
+mindar for without marker based
